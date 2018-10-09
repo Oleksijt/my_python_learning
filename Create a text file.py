@@ -1,0 +1,6 @@
+f = open('testfile.txt', 'w')
+f.write('Hello, world!\nTest')
+f.write('How are you doing?')
+f.write('It`s amaizing file!')
+f.close()
+f.close()
