@@ -143,10 +143,10 @@ class Human:
     def get_sex(self):
         return self.sex
 
+
 class Male(Human):
     def __init__(self):
-        self.sex = 'male'
-
+        super().__init__('', '', sex='male')
 
 
 
