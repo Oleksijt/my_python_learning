@@ -115,39 +115,38 @@
 
 
 """OOP. Classwork (try to do it)
-Create class `Human` with name, age, email, sex(None by default)
-`email` should be a private attribute.
+Create class 'Human' with name, age, email, sex(None by default)
+'email' should be a private attribute.
 Add an ability to change a email.
-Create a child class `Male`.
-`Male` defines `sex` as a `male`.
+Create a child class 'Male'.
+`Male` defines 'sex' as a 'male'.
 male = Male()
 male.get_sex()  # Returns male
-male.change_email(“new_email@example.com”)
+male.change_email('new_email@example.com')
 male.show_email()
 """
 
 
 class Human:
-    def __init__(self, name, age, email='', sex=None):
+    def __init__(self, name = '', age = '', email='', sex=None):
         self.name = name
         self.age = age
-        self.email = email
+        self.__email = email
         self.sex = sex
 
     def change_email(self, new_email):
-        self.email = new_email
+        self.__email = new_email
 
     def show_email(self):
-        return self.email
+        return self.__email
 
     def get_sex(self):
         return self.sex
 
-
 class Male(Human):
     def __init__(self):
-        super().__init__('', '', sex='male')
-
+        super().__init__()
+        self.sex = 'male'
 
 
 male = Male()
