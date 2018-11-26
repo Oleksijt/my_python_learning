@@ -21,4 +21,4 @@ def square_large_list(list_range):  # creates generator with max_range
             i += 1
 
 
-square_large_list(100000000)
+square_large_list(100)
